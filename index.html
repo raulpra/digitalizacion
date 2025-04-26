@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Sitio de Viajes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/sidebar.css">
+    <link rel="stylesheet" href="css/components/breadcrumbs.css">
+    <link rel="stylesheet" href="css/components/carousel.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="navbar-fixed">
+        <div class="container">
+            <div class="navbar">
+                <div class="navbar-brand">
+                    <a href="#">
+                        <img src="img/general/logo.png" alt="Logo de Viajes">
+                    </a>
+                </div>
+                <div class="navbar-search">
+                    <input type="text" placeholder="Buscar destinos, actividades...">
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 01-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="navbar-menu">
+                    <ul class="main-menu">
+                        <li><a href="#">Destinos</a></li>
+                        <li><a href="#">Aventuras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="navbar-actions">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2a10 10 0 00-8 5.9c-.07.08-.14.17-.2.25A10.03 10.03 0 002 12c0 4.41 3.59 8 8 8a9.97 9.97 0 007.7-4.15l.05-.05c.16-.16.32-.31.48-.47A10 10 0 0012 2zm0 18a8 8 0 01-6-3.8c.03-.05.06-.1.09-.15A8 8 0 014 12c0-3.31 2.69-6 6-6a7.97 7.97 0 015.85 2.1l-.05.05c-.13.13-.26.27-.39.4a8 8 0 01-6 3.8z" />
+                                <path d="M12 6a3 3 0 110 6 3 3 0 010-6zm0 8a5 5 0 100-10 5 5 0 000 10z" />
+                            </svg>
+                            Idioma
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Español</a></li>
+                            <li><a href="#">Inglés</a></li>
+                            <li><a href="#">Francés</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="button primary">Registro/Iniciar Sesión</a>
+                    <button class="hamburger-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 17.25z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content-with-sidebar">
+        <aside class="sidebar">
+            <div class="sidebar-filters">
+                <h3>Filtrar Destinos</h3>
+                <div class="filter-group">
+                    <h4>Continente</h4>
+                    <ul>
+                        <li><label><input type="checkbox" name="continente" value="america"> América</label></li>
+                        <li><label><input type="checkbox" name="continente" value="europa"> Europa</label></li>
+                        <li><label><input type="checkbox" name="continente" value="asia"> Asia</label></li>
+                        <li><label><input type="checkbox" name="continente" value="africa"> África</label></li>
+                        <li><label><input type="checkbox" name="continente" value="oceania"> Oceanía</label></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h4>País</h4>
+                    <select name="pais">
+                        <option value="">Todos los países</option>
+                        <option value="espana">España</option>
+                        <option value="italia">Italia</option>
+                        <option value="francia">Francia</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h4>Tipo de Actividad</h4>
+                    <ul>
+                        <li><label><input type="checkbox" name="actividad" value="aventura"> Aventura</label></li>
+                        <li><label><input type="checkbox" name="actividad" value="playa"> Playa</label></li>
+                        <li><label><input type="checkbox" name="actividad" value="cultura"> Cultura</label></li>
+                        <li><label><input type="checkbox" name="actividad" value="gastronomia"> Gastronomía</label></li>
+                    </ul>
+                </div>
+                <button class="button secondary">Aplicar Filtros</button>
+            </div>
+
+            <div class="sidebar-links">
+                <h3>Contenido Destacado</h3>
+                <ul>
+                    <li><a href="#">Los 10 Mejores Destinos de 2025</a></li>
+                    <li><a href="#">Guía para Viajar por Europa con Poco Presupuesto</a></li>
+                    <li><a href="#">Aventuras Inolvidables en Sudamérica</a></li>
+                    <li><a href="#">Secretos Culinarios de Asia</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-weather">
+                <h3>Clima Popular</h3>
+                <div class="weather-item">
+                    <h4>París</h4>
+                    <p class="temperature">20°C</p>
+                    <p class="condition">Soleado</p>
+                </div>
+                <div class="weather-item">
+                    <h4>Roma</h4>
+                    <p class="temperature">25°C</p>
+                    <p class="condition">Mayormente Nublado</p>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="img/destinos/destino1.png" alt="Increíbles Paisajes">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/destinos/destino2.png" alt="Aventuras Exóticas">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/destinos/destino3.png" alt="Cultura Milenaria">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/destinos/destino4.png" alt="Playas Paradisíacas">
+                </div>
+            </div>
+
+            <div class="breadcrumbs">
+                <a href="#">Inicio</a>
+                <span class="separator">/</span>
+                <a href="#">Destinos</a>
+                <span class="separator">/</span>
+                <span class="current">Página Principal</span>
+            </div>
+
+            <h1>Bienvenido a tu sitio de viajes</h1>
+            <p>Descubre los destinos más fascinantes del mundo y planifica tu próxima aventura con nosotros.</p>
+            <p>Echa un vistazo a nuestras ofertas destacadas y encuentra la inspiración que necesitas para tus próximas vacaciones.</p>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tu Sitio de Viajes</p>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>

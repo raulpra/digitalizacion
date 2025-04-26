@@ -1,0 +1,137 @@
+/* Estilos para la Sidebar */
+.sidebar {
+    width: 300px; /* Ancho típico de la sidebar */
+    padding: 20px;
+    background-color: #f9f9f9; /* Un fondo ligeramente grisáceo */
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.sidebar h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-group ul li {
+    margin-bottom: 8px;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.sidebar-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-links ul li a {
+    text-decoration: none;
+    color: #2c7cc7;
+    transition: color 0.3s ease;
+}
+
+.sidebar-links ul li a:hover {
+    color: #1e5994;
+}
+
+.sidebar-weather .weather-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.sidebar-weather h4 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.sidebar-weather .temperature {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.sidebar-weather .condition {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.button.secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.button.secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilos para la disposición con la sidebar */
+.main-content-with-sidebar {
+    display: flex;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Responsive para la sidebar */
+@media (max-width: 992px) {
+    .main-content-with-sidebar {
+        flex-direction: column; /* Apilar la sidebar y el contenido en pantallas más pequeñas */
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+    }
+}

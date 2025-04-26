@@ -1,0 +1,56 @@
+/* Estilos para el contenedor de las pestañas */
+.tabs-container {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para la lista de pestañas */
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
+}
+
+/* Estilos para cada item de la pestaña */
+.tab-item {
+    flex-grow: 1;
+    text-align: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #555;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 2px solid transparent; /* Línea inferior para la indicación activa */
+}
+
+.tab-item:hover {
+    background-color: #f9f9f9;
+    color: #2c7cc7;
+}
+
+.tab-item.active {
+    color: #2c7cc7;
+    border-bottom-color: #2c7cc7;
+}
+
+/* Estilos para el contenido de cada pestaña */
+.tab-content {
+    padding: 20px;
+    display: none; /* Ocultar el contenido por defecto */
+}
+
+.tab-content.active {
+    display: block; /* Mostrar el contenido de la pestaña activa */
+}
+
+.tab-content h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}

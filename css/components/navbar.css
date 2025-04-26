@@ -1,0 +1,260 @@
+/* Estilos para la Barra de Navegación (Modernizada) */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(244, 247, 246, 0.95); /* Gris Neutro con ligera transparencia */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para mayor modernidad (puede no ser compatible con todos los navegadores) */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; /* Más padding horizontal */
+}
+
+.navbar-brand a {
+    display: block;
+}
+
+.navbar-brand img {
+    height: 32px; /* Ligeramente más grande */
+}
+
+.navbar-search {
+    display: flex;
+    border-radius: 8px; /* Bordes más redondeados */
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+    background-color: white; /* Fondo blanco para el buscador */
+}
+
+.navbar-search input[type="text"] {
+    border: none;
+    padding: 10px 15px; /* Más padding interno */
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #333333;
+    outline: none; /* Eliminar el outline al enfocar */
+}
+
+.navbar-search button {
+    background-color: #2c7cc7; /* Azul Primario para el botón de búsqueda */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: white; /* Texto blanco en el botón de búsqueda */
+    border-radius: 0 8px 8px 0; /* Bordes redondeados solo a la derecha */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-search button:hover {
+    background-color: #1e5994; /* Tono más oscuro al hacer hover */
+}
+
+.navbar-search svg {
+    width: 20px;
+    height: 20px;
+    fill: white; /* Icono de búsqueda en blanco */
+}
+
+.navbar-menu .main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Centrar verticalmente los elementos del menú */
+}
+
+.navbar-menu .main-menu li {
+    margin-left: 25px; /* Más espacio entre los enlaces */
+}
+
+.navbar-menu .main-menu li a {
+    text-decoration: none;
+    color: #333333; /* Texto más oscuro para el menú */
+    font-weight: 500; /* Un grosor de fuente semibold */
+    transition: color 0.3s ease;
+}
+
+.navbar-menu .main-menu li a:hover {
+    color: #2c7cc7; /* Azul Primario al hacer hover */
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Más espacio entre las acciones */
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu svg {
+    width: 28px; /* Icono más grande */
+    height: 28px;
+    fill: #333333;
+}
+
+/* Estilos para el Dropdown (Modernizado) */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 10px 15px; /* Más padding */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Más espacio entre el icono y el texto */
+    color: #555; /* Un gris más claro */
+    font-weight: 500;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background-color: #f0f0f0; /* Ligero fondo gris al hacer hover */
+}
+
+.dropdown-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: #2c7cc7; /* Icono del dropdown en azul primario */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 5px); /* Espacio entre el botón y el menú */
+    left: 0;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    display: none;
+    min-width: 150px; /* Un poco más ancho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px; /* Más padding en los items del menú */
+    text-decoration: none;
+    color: #333333;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el botón de registro/inicio de sesión */
+.navbar-actions .button.primary {
+    background-color: #2c7cc7; /* Azul Primario para el botón */
+    color: white;
+    padding: 12px 25px; /* Más padding */
+    border-radius: 8px; /* Bordes redondeados */
+    font-weight: 500;
+}
+
+.navbar-actions .button.primary:hover {
+    background-color: #1e5994;
+}
+
+/* Estilos para pantallas más pequeñas (responsive) */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* <---- ¡Esta línea faltaba! Oculta el menú por defecto en pantallas pequeñas */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white; /* Fondo blanco para el menú responsive */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+    }
+
+    .navbar-menu.active {
+        display: block; /* Muestra el menú cuando la clase 'active' está presente */
+    }
+
+    .navbar-menu .main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu .main-menu li {
+        margin: 15px 0; /* Más espacio entre los items del menú responsive */
+    }
+
+    .navbar-menu .main-menu li a {
+        padding: 10px 0; /* Añadir padding vertical a los enlaces del menú responsive */
+        font-size: 1.1rem; /* Texto un poco más grande */
+    }
+
+    .navbar-actions {
+        gap: 10px;
+    }
+
+    .dropdown-toggle {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar-actions .button.primary {
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    .navbar-menu {
+        display: none; /* Ocultar el menú por defecto en pantallas pequeñas */
+        position: absolute;
+        top: 100%; /* Mostrar debajo de la barra de navegación */
+        left: 0;
+        width: 100%;
+        background-color: white; /* O el color de fondo que desees */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+        padding: 15px; /* Espacio interno opcional */
+        z-index: 10; /* Asegurar que esté por encima de otros elementos */
+    }
+
+    .navbar-menu.active {
+        display: block; /* Mostrar el menú cuando la clase 'active' está presente */
+    }
+
+    .navbar-menu .main-menu {
+        flex-direction: column; /* Apilar los items del menú verticalmente */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .navbar-menu .main-menu li {
+        margin: 10px 0; /* Espacio entre los items del menú */
+    }
+
+    .hamburger-menu {
+        display: block; /* Asegurar que el botón hamburguesa se muestre */
+    }
+}

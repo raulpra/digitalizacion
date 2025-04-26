@@ -1,0 +1,24 @@
+.carousel-container {
+    position: relative;
+    width: 100%; /* O el ancho que desees */
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide img {
+    display: block;
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}

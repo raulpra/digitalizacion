@@ -1,0 +1,38 @@
+/* Estilos para el Breadcrumbs */
+.breadcrumbs {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #2c7cc7; /* Azul Primario para los enlaces */
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #1e5994; /* Tono más oscuro al hacer hover */
+}
+
+.breadcrumbs .separator {
+    margin: 0 8px;
+    color: #d9d9d9; /* Gris Claro para el separador */
+}
+
+.breadcrumbs .current {
+    font-weight: 500;
+    color: #333333; /* Gris Oscuro para la página actual */
+}
+
+/* Responsive para el breadcrumbs (opcional, para evitar desbordamiento en pantallas pequeñas) */
+@media (max-width: 600px) {
+    .breadcrumbs {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+    }
+
+    .breadcrumbs .separator {
+        margin: 0 5px;
+    }
+}
