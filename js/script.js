@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Lógica del menú hamburguesa
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navbarMenu = document.querySelector('.navbar-menu');
 
@@ -9,23 +10,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Carrusel de imágenes
-    const slides = document.querySelectorAll('.carousel-slide');
+    const images = document.querySelectorAll('.carousel-images img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
     let currentIndex = 0;
-    const intervalTime = 2000; // 2 segundos
+    let intervalId;
 
-    function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        slides[index].classList.add('active');
+    function showImage(index) {
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
     }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+    function nextImage() {
+        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+        showImage(currentIndex);
     }
 
-    // Mostrar la primera imagen al cargar la página
-    showSlide(currentIndex);
+    function prevImage() {
+        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+        showImage(currentIndex);
+    }
 
-    // Iniciar el carrusel automático
-    setInterval(nextSlide, intervalTime);
+    prevBtn.addEventListener('click', function() {
+        prevImage();
+        resetAutoplay();
+    });
+
+    nextBtn.addEventListener('click', function() {
+        nextImage();
+        resetAutoplay();
+    });
+
+    function startAutoplay() {
+        intervalId = setInterval(nextImage, 5000); // cambia cada 5 segundos
+    }
+
+    function resetAutoplay() {
+        clearInterval(intervalId);
+        startAutoplay();
+    }
+
+    // Inicializar
+    showImage(currentIndex);
+    startAutoplay();
 });

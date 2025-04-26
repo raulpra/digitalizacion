@@ -1,0 +1,51 @@
+.testimonials-section.compact-testimonials {
+    padding: 30px 20px;
+    background-color: #f9f9f9; /* Un fondo muy claro, casi blanco */
+}
+
+.testimonials-section.compact-testimonials h2 {
+    margin-bottom: 20px;
+    color: #37474f; /* Primario: Gris azulado oscuro */
+}
+
+.testimonial-list {
+    display: flex;
+    flex-direction: column; /* Apila los testimonios verticalmente */
+    gap: 20px; /* Espacio entre cada testimonio */
+    margin-top: 15px;
+}
+
+.testimonial-item {
+    background-color: #ffffff; /* Fondo de la tarjeta: Blanco puro */
+    box-shadow: 0 1px 3px rgba(38, 50, 56, 0.05); /* Sombra sutil */
+    color: #263238; /* Texto principal */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.testimonial-item .rating {
+    color: #00bcd4; 
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonial-item .testimonial-text {
+    font-style: italic;
+    color: #546e7a; /* Un tono de gris más claro para el texto del testimonio */
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 0.95em; /* Texto ligeramente más pequeño */
+}
+
+.testimonial-item .testimonial-author {
+    font-weight: bold;
+    color: #37474f; /* Primario */
+    text-align: right;
+    font-size: 0.85em; /* Autor ligeramente más pequeño */
+}
+
+.single-testimonial-card {
+    background-color: #ffffff; /* Fondo de la tarjeta única */
+    box-shadow: 0 1px 3px rgba(38, 50, 56, 0.05);
+}

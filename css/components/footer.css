@@ -1,0 +1,103 @@
+footer {
+    background-color: #37474f; /* Primario: Gris azulado oscuro */
+    color: #eceff1;
+    padding: 40px 20px;
+    font-size: 0.9em;
+    text-align: center; /* Centrar el contenido por defecto para pantallas pequeñas */
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más estrechas */
+    grid-gap: 20px;
+    margin-bottom: 30px; /* Espacio antes del copyright */
+    text-align: left; /* Alinear el texto de las columnas a la izquierda */
+}
+
+.footer-column h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #00bcd4; /* Color de acento para los títulos */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #eceff1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #00bcd4;
+}
+
+/* Estilos específicos para la sección de redes sociales */
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social .social-icons img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social .social-icons a:hover img {
+    opacity: 1;
+}
+
+/* Estilos específicos para el formulario de contacto */
+.footer-contact-form input[type="email"],
+.footer-contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #455a64; /* Un tono más claro del primario para el fondo del input */
+    color: #eceff1;
+    border: 1px solid #546e7a;
+    box-sizing: border-box;
+}
+
+.footer-contact-form textarea {
+    min-height: 80px;
+}
+
+.footer-contact-form .button.small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Estilos para el copyright al final y centrado */
+.footer-copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top-color: #546e7a;
+    text-align: center;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+/* Estilos para pantallas más grandes para una disposición horizontal de las columnas */
+@media (min-width: 768px) {
+    .footer-columns {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajustar ancho mínimo */
+        text-align: left;
+    }
+}

@@ -2,12 +2,13 @@
 .breadcrumbs {
     padding: 15px 20px;
     font-size: 0.9rem;
-    color: #777;
+    background-color: #eceff1; /* Secundario: Gris muy claro */
+    color: #263238; /* Texto del breadcrumbs: Gris oscuro */
 }
 
 .breadcrumbs a {
     text-decoration: none;
-    color: #2c7cc7; /* Azul Primario para los enlaces */
+    color: #263238; /* Azul Primario para los enlaces */
     transition: color 0.3s ease;
 }
 
@@ -17,12 +18,12 @@
 
 .breadcrumbs .separator {
     margin: 0 8px;
-    color: #d9d9d9; /* Gris Claro para el separador */
+    color: #78909c; /* Gris Claro para el separador */
 }
 
 .breadcrumbs .current {
     font-weight: 500;
-    color: #333333; /* Gris Oscuro para la página actual */
+    color: #78909c;  /* Gris Oscuro para la página actual */
 }
 
 /* Responsive para el breadcrumbs (opcional, para evitar desbordamiento en pantallas pequeñas) */
