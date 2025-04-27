@@ -24,7 +24,7 @@
 }
 
 .navbar-brand img {
-    height: 32px; /* Ligeramente más grande */
+    height:42px; /* Ligeramente más grande */
 }
 
 .navbar-search {
@@ -264,3 +264,4 @@
     .hamburger-menu svg {
         fill: #eceff1;
     }
+}
